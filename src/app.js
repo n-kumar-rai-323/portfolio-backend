@@ -19,25 +19,9 @@ const app = express();
 // ==========================================
 
 // Production-ready CORS Configuration
-const allowedOrigins = [
-  'http://localhost:5173', // Vite development port
-  'http://localhost:3000', // Alternative CRA development port
-  'https://portfolio-frontend-mu-pied.vercel.app',
-  // तपाईंको नयाँ फ्रन्टइन्ड यूआरएल यहाँ थप्नुहोस्:
-  'https://portfolio-frontend-6040em129-infonkumarrai323-8883s-projects.vercel.app' 
-];
-
+// यसले संसारको जुनसुकै फ्रन्टइन्ड यूआरएलबाट पनि बिना कुनै एरर डेटा तान्न दिन्छ
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like Postman, mobile apps, or server-to-server requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
+  origin: '*',
   credentials: true
 }));
 
