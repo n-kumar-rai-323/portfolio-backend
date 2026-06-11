@@ -22,9 +22,9 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173', // Vite development port
   'http://localhost:3000', // Alternative CRA development port
-  'https://portfolio-frontend-mu-pied.vercel.app'
-  // TODO: Add your live Vercel frontend URL here once your frontend is deployed:
-  // 'https://your-portfolio-frontend.vercel.app' 
+  'https://portfolio-frontend-mu-pied.vercel.app',
+  // तपाईंको नयाँ फ्रन्टइन्ड यूआरएल यहाँ थप्नुहोस्:
+  'https://portfolio-frontend-6040em129-infonkumarrai323-8883s-projects.vercel.app' 
 ];
 
 app.use(cors({
